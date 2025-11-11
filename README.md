@@ -12,10 +12,6 @@ Sistem ini bekerja dengan dua langkah utama:
 1.  **Validasi Wajah:** Pengguna harus memposisikan wajah mereka di dalam sebuah oval yang ada di tengah layar.
 2.  **Interaksi Tangan:** Setelah wajah valid, pengguna bisa menggunakan ujung jari telunjuk untuk menyentuh kotak-kotak berwarna yang akan memicu pemutaran file suara (nada musik).
 
-![Contoh Aplikasi](https://via.placeholder.com/1280x720.png?text=Face+Alignment+and+Hand+Interaction+Demo)
-
-*(Ganti dengan screenshot atau GIF dari aplikasi Anda yang sedang berjalan)*
-
 ##  Fitur
 
 -   **Validasi Wajah Real-time:** Menggunakan MediaPipe Face Mesh untuk mendeteksi wajah dan memastikan pengguna berada di posisi yang ditentukan.
@@ -33,7 +29,7 @@ Sebelum memulai, pastikan Anda telah menginstal hal-hal berikut:
 -   Pip (Manajer paket Python)
 -   Kamera Web (Webcam) yang terpasang dan berfungsi
 
-## 🛠️ Cara Setup Proyek
+##  Cara Setup Proyek
 
 Ikuti langkah-langkah di bawah ini untuk mengatur dan menjalankan proyek ini di komputer Anda.
 

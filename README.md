@@ -16,7 +16,7 @@ Sistem ini bekerja dengan dua langkah utama:
 
 *(Ganti dengan screenshot atau GIF dari aplikasi Anda yang sedang berjalan)*
 
-## 🚀 Fitur
+##  Fitur
 
 -   **Validasi Wajah Real-time:** Menggunakan MediaPipe Face Mesh untuk mendeteksi wajah dan memastikan pengguna berada di posisi yang ditentukan.
 -   **Deteksi Tangan & Landmark:** Melacak gerakan tangan dan 21 landmark pada setiap tangan dengan MediaPipe Hands.
@@ -25,7 +25,7 @@ Sistem ini bekerja dengan dua langkah utama:
 -   **Visual Feedback:** Memberikan umpan balik visual secara real-time, seperti perubahan warna oval, penanda posisi jari, dan penyorotan kotak yang dipilih.
 -   **Anti-Spam Suara:** Logika cerdas untuk memastikan setiap suara hanya diputar sekali saat jari memasuki area kotak, mencegah pemutaran berulang-ulang.
 
-## 📋 Prasyarat
+##  Prasyarat
 
 Sebelum memulai, pastikan Anda telah menginstal hal-hal berikut:
 
@@ -85,20 +85,7 @@ Kode ini membutuhkan 5 file suara dengan format `.mp3`. Buatlah folder (atau let
 
 Pastikan file-file ini berada di **direktori yang sama dengan file Python Anda**, atau Anda bisa memodifikasi variabel `AUDIO_FILENAMES` dalam kode untuk menyesuaikan path-nya.
 
-Struktur direktori yang disarankan:
-```
-nama-repo-anda/
-├── main.py             # File Python utama Anda
-├── do.mp3
-├── re.mp3
-├── mi.mp3
-├── fa.mp3
-├── sol.mp3
-├── README.md
-└── ... (file lainnya)
-```
-
-## 🎮 Cara Penggunaan
+##  Cara Penggunaan
 
 Setelah semua setup selesai, Anda dapat menjalankan aplikasinya:
 
@@ -116,7 +103,7 @@ Setelah semua setup selesai, Anda dapat menjalankan aplikasinya:
 
 5.  **Keluar:** Tekan tombol `q` pada keyboard untuk menutup aplikasi.
 
-## 📁 Struktur Proyek
+##  Struktur Proyek
 
 ```
 .
@@ -129,7 +116,7 @@ Setelah semua setup selesai, Anda dapat menjalankan aplikasinya:
 └── README.md               # File dokumentasi ini
 ```
 
-## 🤝 Kontribusi
+##  Kontribusi
 
 Kontribusi sangat dihargai! Jika Anda memiliki ide untuk fitur baru, menemukan bug, atau ingin meningkatkan kode, silakan buat *issue* atau ajukan *pull request*.
 

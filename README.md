@@ -143,8 +143,4 @@ Kontribusi sangat dihargai! Jika Anda memiliki ide untuk fitur baru, menemukan b
 
 Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
 
-## 👤 Kontak
 
-Jika Anda memiliki pertanyaan, silakan hubungi saya melalui [email Anda] atau [profil GitHub Anda].
-
----

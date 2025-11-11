@@ -116,6 +116,6 @@ Contributions are highly appreciated! If you have ideas for new features, find b
 4.  Push to the branch (`git push origin feature/NewFeature`)
 5.  Open a Pull Request
 
-##  License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Apache License 2.0**—see the **[LICENSE](LICENSE)** file for the full terms and the **[NOTICE](NOTICE)** file for copyright and attribution details.

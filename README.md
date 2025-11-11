@@ -1,77 +1,71 @@
+# Hand Interaction & Face Validation System with MediaPipe
 
+This project is a real-time computer vision application developed with Python, using the OpenCV and MediaPipe libraries. This application allows users to interact with objects on the screen using hand gestures after their face has been detected and validated in the correct position.
 
-Tentu, saya akan buatkan file `README.md` yang lengkap dan profesional untuk proyek Anda. File ini akan menjelaskan cara setup, cara penggunaan, dan fitur-fitur dari kode yang Anda berikan.
+The system works in two main steps:
+1.  **Face Validation:** The user must position their face within an oval displayed in the center of the screen.
+2.  **Hand Interaction:** Once the face is validated, the user can use their index finger to touch colored boxes, which will trigger the playing of a sound file (musical note).
 
----
+## Features
 
-# Sistem Interaksi Tangan & Validasi Wajah dengan MediaPipe
+-   **Real-time Face Validation:** Uses MediaPipe Face Mesh to detect the face and ensure the user is in the specified position.
+-   **Hand & Landmark Detection:** Tracks hand movements and 21 landmarks on each hand with MediaPipe Hands.
+-   **Box-Based Interaction:** 5 interactive boxes with different colors and positions that can be triggered with the index finger.
+-   **Sound Playback:** Plays different MP3 files (Do, Re, Mi, Fa, Sol) when the corresponding box is touched.
+-   **Visual Feedback:** Provides real-time visual feedback, such as changes in the oval's color, a finger position marker, and highlighting of the selected box.
+-   **Sound Spam Prevention:** Smart logic to ensure each sound is only played once when the finger enters the box area, preventing repeated playback.
 
-Proyek ini adalah aplikasi computer vision real-time yang dikembangkan dengan Python, menggunakan library OpenCV dan MediaPipe. Aplikasi ini memungkinkan pengguna untuk berinteraksi dengan objek di layar menggunakan gerakan tangan setelah wajah mereka terdeteksi dan divalidasi di posisi yang tepat.
+## Prerequisites
 
-Sistem ini bekerja dengan dua langkah utama:
-1.  **Validasi Wajah:** Pengguna harus memposisikan wajah mereka di dalam sebuah oval yang ada di tengah layar.
-2.  **Interaksi Tangan:** Setelah wajah valid, pengguna bisa menggunakan ujung jari telunjuk untuk menyentuh kotak-kotak berwarna yang akan memicu pemutaran file suara (nada musik).
+Before you begin, ensure you have the following installed:
 
-##  Fitur
+-   Python 3.7 or higher
+-   Pip (Python package manager)
+-   A functioning Web Camera
 
--   **Validasi Wajah Real-time:** Menggunakan MediaPipe Face Mesh untuk mendeteksi wajah dan memastikan pengguna berada di posisi yang ditentukan.
--   **Deteksi Tangan & Landmark:** Melacak gerakan tangan dan 21 landmark pada setiap tangan dengan MediaPipe Hands.
--   **Interaksi Berbasis Kotak:** 5 kotak interaktif dengan warna dan posisi berbeda yang dapat dipicu dengan jari telunjuk.
--   **Pemutaran Suara:** Memutar file MP3 yang berbeda (Do, Re, Mi, Fa, Sol) saat kotak yang sesuai disentuh.
--   **Visual Feedback:** Memberikan umpan balik visual secara real-time, seperti perubahan warna oval, penanda posisi jari, dan penyorotan kotak yang dipilih.
--   **Anti-Spam Suara:** Logika cerdas untuk memastikan setiap suara hanya diputar sekali saat jari memasuki area kotak, mencegah pemutaran berulang-ulang.
+## Project Setup
 
-##  Prasyarat
+Follow the steps below to set up and run this project on your computer.
 
-Sebelum memulai, pastikan Anda telah menginstal hal-hal berikut:
+### Step 1: Clone the Repository
 
--   Python 3.7 atau lebih tinggi
--   Pip (Manajer paket Python)
--   Kamera Web (Webcam) yang terpasang dan berfungsi
-
-##  Cara Setup Proyek
-
-Ikuti langkah-langkah di bawah ini untuk mengatur dan menjalankan proyek ini di komputer Anda.
-
-### Langkah 1: Clone Repository
-
-Pertama, clone repository ini ke komputer lokal Anda menggunakan Git:
+First, clone this repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/username/nama-repo-anda.git
-cd nama-repo-anda
+git clone https://github.com/username/your-repo-name.git
+cd your-repo-name
 ```
 
-*(Ganti `username/nama-repo-anda` dengan URL repository Anda)*
+*(Replace `username/your-repo-name` with your repository's URL)*
 
-### Langkah 2: Buat Lingkungan Virtual (Sangat Direkomendasikan)
+### Step 2: Create a Virtual Environment (Highly Recommended)
 
-Menggunakan lingkungan virtual akan mengisolasi dependensi proyek Anda dari sistem global.
+Using a virtual environment will isolate your project's dependencies from your global system.
 
-**Untuk Windows:**
+**For Windows:**
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-**Untuk macOS/Linux:**
+**For macOS/Linux:**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Langkah 3: Instal Dependensi
+### Step 3: Install Dependencies
 
-Setelah lingkungan virtual aktif, instal semua library yang diperlukan dengan perintah berikut:
+After activating the virtual environment, install all the required libraries with the following command:
 
 ```bash
 pip install opencv-python mediapipe numpy playsound==1.2.2
 ```
-> **Catatan:** Versi `playsound==1.2.2` seringkali lebih stabil dan kompatibel. Jika mengalami masalah, Anda bisa mencoba versi lain atau library alternatif seperti `pygame.mixer`.
+> **Note:** Version `playsound==1.2.2` is often more stable and compatible. If you encounter issues, you can try other versions or an alternative library like `pygame.mixer`.
 
-### Langkah 4: Siapkan File Suara
+### Step 4: Prepare Sound Files
 
-Kode ini membutuhkan 5 file suara dengan format `.mp3`. Buatlah folder (atau letakkan di direktori utama proyek) dan pastikan Anda memiliki file-file dengan nama **persis** seperti di bawah ini:
+This code requires 5 sound files in `.mp3` format. Create a folder (or place them in the main project directory) and ensure you have files with the **exact** names as below:
 
 -   `do.mp3`
 -   `re.mp3`
@@ -79,51 +73,49 @@ Kode ini membutuhkan 5 file suara dengan format `.mp3`. Buatlah folder (atau let
 -   `fa.mp3`
 -   `sol.mp3`
 
-Pastikan file-file ini berada di **direktori yang sama dengan file Python Anda**, atau Anda bisa memodifikasi variabel `AUDIO_FILENAMES` dalam kode untuk menyesuaikan path-nya.
+Make sure these files are in the **same directory as your Python file**, or you can modify the `AUDIO_FILENAMES` variable in the code to adjust their path.
 
-##  Cara Penggunaan
+## How to Use
 
-Setelah semua setup selesai, Anda dapat menjalankan aplikasinya:
+Once all setup is complete, you can run the application:
 
-1.  **Jalankan Skrip:** Buka terminal/command prompt di direktori proyek, lalu jalankan perintah:
+1.  **Run the Script:** Open a terminal/command prompt in the project directory, then run the command:
     ```bash
     python main.py
     ```
-    *(Ganti `main.py` dengan nama file Python Anda jika berbeda)*
+    *(Replace `main.py` with your Python file name if it's different)*
 
-2.  **Posisikan Wajah:** Arahkan wajah Anda ke kamera. Posisikan wajah tepat di tengah oval yang muncul di layar. Oval akan berubah warna menjadi hijau dan menampilkan "Wajah Tepat, OK!" jika posisi sudah benar.
+2.  **Position Your Face:** Point your face at the camera. Position your face exactly in the center of the oval that appears on the screen. The oval will turn green and display "Face is correctly positioned, OK!" if the position is correct.
 
-3.  **Interaksi dengan Tangan:** Setelah wajah valid, angkat salah satu tangan Anda ke depan kamera. Arahkan ujung jari telunjuk Anda ke salah satu dari 5 kotak berwarna.
+3.  **Interact with Your Hand:** After your face is validated, raise one of your hands in front of the camera. Point your index finger at one of the 5 colored boxes.
 
-4.  **Dengarkan Suara:** Saat jari Anda memasuki area kotak, aplikasi akan memutar nada musik yang sesuai dengan kotak tersebut dan menampilkan nama kotak di layar.
+4.  **Listen to the Sound:** When your finger enters the box area, the application will play the musical note corresponding to that box and display the box's name on the screen.
 
-5.  **Keluar:** Tekan tombol `q` pada keyboard untuk menutup aplikasi.
+5.  **Exit:** Press the `q` key on your keyboard to close the application.
 
-##  Struktur Proyek
+## Project Structure
 
 ```
 .
-├── main.py                 # Skrip utama aplikasi
-├── do.mp3                  # File suara untuk kotak Merah (Do)
-├── re.mp3                  # File suara untuk kotak Hijau (Re)
-├── mi.mp3                  # File suara untuk kotak Biru (Mi)
-├── fa.mp3                  # File suara untuk kotak Kuning (Fa)
-├── sol.mp3                 # File suara untuk kotak Ungu (Sol)
-└── README.md               # File dokumentasi ini
+├── main.py                 # Main application script
+├── do.mp3                  # Sound file for the Red box (Do)
+├── re.mp3                  # Sound file for the Green box (Re)
+├── mi.mp3                  # Sound file for the Blue box (Mi)
+├── fa.mp3                  # Sound file for the Yellow box (Fa)
+├── sol.mp3                 # Sound file for the Purple box (Sol)
+└── README.md               # This documentation file
 ```
 
-##  Kontribusi
+## Contributing
 
-Kontribusi sangat dihargai! Jika Anda memiliki ide untuk fitur baru, menemukan bug, atau ingin meningkatkan kode, silakan buat *issue* atau ajukan *pull request*.
+Contributions are highly appreciated! If you have ideas for new features, find bugs, or want to improve the code, please feel free to open an issue or submit a pull request.
 
-1.  Fork proyek ini
-2.  Buat fitur branch (`git checkout -b fitur/FiturBaru`)
-3.  Commit perubahan Anda (`git commit -m 'Menambahkan fitur baru'`)
-4.  Push ke branch (`git push origin fitur/FiturBaru`)
-5.  Buka Pull Request
+1.  Fork this project
+2.  Create a feature branch (`git checkout -b feature/NewFeature`)
+3.  Commit your changes (`git commit -m 'Add a new feature'`)
+4.  Push to the branch (`git push origin feature/NewFeature`)
+5.  Open a Pull Request
 
-## 📝 Lisensi
+## 📝 License
 
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
-
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

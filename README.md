@@ -110,7 +110,7 @@ Once all setup is complete, you can run the application:
 
 Contributions are highly appreciated! If you have ideas for new features, find bugs, or want to improve the code, please feel free to open an issue or submit a pull request.
 
-1.  Fork this projectt
+1.  Fork this project
 2.  Create a feature branch (`git checkout -b feature/NewFeature`)
 3.  Commit your changes (`git commit -m 'Add a new feature'`)
 4.  Push to the branch (`git push origin feature/NewFeature`)

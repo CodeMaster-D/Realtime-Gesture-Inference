@@ -114,7 +114,7 @@ Contributions are highly appreciated! If you have ideas for new features, find b
 2.  Create a feature branch (`git checkout -b feature/NewFeature`)
 3.  Commit your changes (`git commit -m 'Add a new feature'`)
 4.  Push to the branch (`git push origin feature/NewFeature`)
-5.  Open a Pull Request
+5.  Open a Pull Request.
 
 ## License
 

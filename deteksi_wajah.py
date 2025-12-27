@@ -50,10 +50,10 @@ last_played_box = None
 # ----------------------------------------------------------------
 for box in BOXES_DATA:
     if not os.path.exists(box['sound_path']):
-        print(f"❌ ERROR: File '{box['sound_path']}' tidak ditemukan. Suara untuk {box['name']} dinonaktifkan.")
+        print(f"ERROR: File '{box['sound_path']}' tidak ditemukan. Suara untuk {box['name']} dinonaktifkan.")
         box['sound_path'] = None 
     else:
-        print(f"✅ Sukses menemukan {box['sound_path']}.")
+        print(f"Sukses menemukan {box['sound_path']}.")
 
 print("Inisialisasi audio selesai. Memulai kamera...")
 # ----------------------------------------------------------------
@@ -166,7 +166,7 @@ with mp_face_mesh.FaceMesh(max_num_faces=3, min_detection_confidence=0.5, min_tr
                     playsound(box_data['sound_path'], block=False)
                     last_played_box = current_hovered_box
                 except Exception as e:
-                    print(f"❌ Gagal memutar {box_data['name']} menggunakan playsound: {e}")
+                    print(f"Gagal memutar {box_data['name']} menggunakan playsound: {e}")
                     last_played_box = current_hovered_box # Mencegah spam error
             else:
                  last_played_box = current_hovered_box 

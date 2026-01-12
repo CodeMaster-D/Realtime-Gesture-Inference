@@ -52,6 +52,7 @@ venv\Scripts\activate
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+.\venv\Scripts\activate
 ```
 
 ### Step 3: Install Dependencies

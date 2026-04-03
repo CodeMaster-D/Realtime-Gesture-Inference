@@ -10,6 +10,20 @@ The system works in two main steps:
 1.  **Face Validation:** The user must position their face within an oval displayed in the center of the screen.
 2.  **Hand Interaction:** Once the face is validated, the user can use their index finger to touch colored boxes, which will trigger the playing of a sound file (musical note).
 
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Project Setup](#project-setup)
+  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
+  - [Step 2: Create a Virtual Environment](#step-2-create-a-virtual-environment-highly-recommended)
+  - [Step 3: Install Dependencies](#step-3-install-dependencies)
+  - [Step 4: Prepare Sound Files](#step-4-prepare-sound-files)
+- [How to Use](#how-to-use)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 -   **Real-time Face Validation:** Uses MediaPipe Face Mesh to detect the face and ensure the user is in the specified position.

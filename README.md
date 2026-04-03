@@ -1,5 +1,9 @@
 # Hand Interaction & Face Validation System with MediaPipe
-
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![MediaPipe](https://img.shields.io/badge/MediaPipe-00A4EF?style=for-the-badge)](https://developers.google.com/mediapipe)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 This project is a real-time computer vision application developed with Python, using the OpenCV and MediaPipe libraries. This application allows users to interact with objects on the screen using hand gestures after their face has been detected and validated in the correct position.
 
 The system works in two main steps:

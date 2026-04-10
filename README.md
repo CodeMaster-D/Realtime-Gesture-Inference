@@ -50,8 +50,8 @@ Follow the steps below to set up and run this project on your computer.
 First, clone this repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/CodeMaster-D/Gestune.git
+cd Gestune
 ```
 
 *(Replace `username/your-repo-name` with your repository's URL)*
